@@ -1,0 +1,27 @@
+.pretty_form {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 14rem);
+}
+
+.pretty_number_input {
+    font-size: 2rem;
+    width: 100%;
+    align-content: space-between;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.pretty_number_input input {
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 2rem;
+    padding: 0.5rem;
+    width:2ch;
+    text-align: right;
+}
+
+.pretty_button{
+    font-size: 2rem;
+    padding: 0.5rem;
+}
