@@ -87,7 +87,7 @@ export default function BreathTimer({in_time, out_time, in_hold, out_hold}: prop
     return () => clearInterval(interval);
   });
 
-  const radius = `${circleRadiusRatio(runningFor, states, currentBreathState) * 80}vw`;
+  const radius = `${circleRadiusRatio(runningFor, states, currentBreathState) * 80}vmin`;
   const background = circleColour(runningFor, states, currentBreathState);
   const timeRemaining = states[currentBreathState].duration - runningFor;
 
