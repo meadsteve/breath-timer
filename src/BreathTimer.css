@@ -1,0 +1,11 @@
+.blue-circle {
+  border-radius: 50%;
+  max-width: 500px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
