@@ -89,9 +89,11 @@ export default function BreathTimer({in_time, out_time, in_hold, out_hold}: prop
 
   const radius = circleRadius(runningFor, states, currentBreathState);
   const background = circleColour(runningFor, states, currentBreathState);
+  const timeRemaining = states[currentBreathState].duration - runningFor;
+
   return <div className="blue-circle" style={{width: radius, height: radius, background: background}}>
     <BreathLabel state={currentBreathState}/>
     <br/>
-    <span>{runningFor.toFixed(2)}</span>
+    <span>{timeRemaining.toFixed(2)}</span>
   </div>
 }
