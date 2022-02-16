@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import "./BreathTimer.css";
 
-type props = {
+export type props = {
   in_time: number,
   in_hold:number,
   out_time: number,

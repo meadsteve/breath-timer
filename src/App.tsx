@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import BreathTimer from "./BreathTimer";
+import BreathTimerConfigerer from "./BreathTimerConfigerer";
 
 function App() {
   useEffect(() => {
@@ -13,7 +13,7 @@ function App() {
   });
   return (
     <div className="App">
-        <BreathTimer in_time={5} in_hold={1} out_time={5} out_hold={1}/>
+        <BreathTimerConfigerer/>
     </div>
   );
 }
