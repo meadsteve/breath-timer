@@ -36,13 +36,13 @@ function BreathText({state, children}: {state: BreathState, children?: JSX.Eleme
 function circleRadiusRatio(runningFor: number, states: StateConfig, state: BreathState) {
   switch (state) {
     case "in":
-      return 0.3 + 0.7 * runningFor / states[state].duration;
+      return 0.4 + 0.6 * runningFor / states[state].duration;
     case "out":
-      return 1 - 0.7 * runningFor / states[state].duration;
+      return 1 - 0.6 * runningFor / states[state].duration;
     case "in_hold":
       return 1;
     case "out_hold":
-      return 0.3;
+      return 0.4;
   }
 }
 
