@@ -1,5 +1,6 @@
 import {FormEvent, useState} from "react";
 import BreathTimer, {props as breathtimeProps} from "./BreathTimer"
+import "./BreathTimerConfigerer.css"
 
 
 export default function BreathTimerConfigerer() {
@@ -21,22 +22,22 @@ export default function BreathTimerConfigerer() {
   }
 
   if (!values) {
-    return <form onSubmit={handleSubmit}>
+    return <form onSubmit={handleSubmit} className="pretty_form">
       <label>
         Breath in:
-        <input defaultValue={5} name="in_time"/>
+        <input defaultValue={5} name="in_time" type="number"/>
       </label>
       <label>
-        hold:
-        <input defaultValue={1} name="in_hold"/>
+        Hold:
+        <input defaultValue={1} name="in_hold" type="number"/>
       </label>
       <label>
         Breath out:
-        <input defaultValue={5} name="out_time"/>
+        <input defaultValue={5} name="out_time" type="number"/>
       </label>
       <label>
-        Breath hold:
-        <input defaultValue={1} name="out_hold"/>
+        Hold:
+        <input defaultValue={1} name="out_hold" type="number"/>
       </label>
       <input type="submit" value="Start"/>
     </form>;

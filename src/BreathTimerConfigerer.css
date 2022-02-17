@@ -1,0 +1,19 @@
+.pretty_form {
+    width: 80%;
+    font-size: 2rem;
+}
+
+.pretty_form label{
+    display: inline-block;
+}
+
+.pretty_form input[type=number] {
+    margin:1rem 1rem;
+    width:4ch;
+    font-size: 2rem;
+}
+
+.pretty_form input[type=submit] {
+    padding: 0.5rem;
+    font-size: 2rem;
+}
