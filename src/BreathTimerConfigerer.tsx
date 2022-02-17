@@ -23,25 +23,23 @@ export default function BreathTimerConfigerer() {
 
   if (!values) {
     return <form onSubmit={handleSubmit} className="pretty_form">
-      <span className="pretty_number_input">
       <label>
         Breath in:
-        </label>
-        <input defaultValue={5} name="in_time"/>
-        </span>
-      <label className="pretty_number_input">
-        Hold:
-        <input defaultValue={1} name="in_hold"/>
+        <input defaultValue={5} name="in_time" type="number"/>
       </label>
-      <label  className="pretty_number_input">
+      <label>
+        Hold:
+        <input defaultValue={1} name="in_hold" type="number"/>
+      </label>
+      <label>
         Breath out:
-        <input defaultValue={5} name="out_time"/>
+        <input defaultValue={5} name="out_time" type="number"/>
       </label>
-      <label className="pretty_number_input">
+      <label>
         Hold:
-        <input defaultValue={1} name="out_hold"/>
+        <input defaultValue={1} name="out_hold" type="number"/>
       </label>
-      <input type="submit" value="Start" className="pretty_button"/>
+      <input type="submit" value="Start"/>
     </form>;
   } else {
     console.log(values);
