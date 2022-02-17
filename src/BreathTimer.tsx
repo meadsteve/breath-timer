@@ -13,21 +13,24 @@ type StateConfig = {
   [key in BreathState]: { duration: number; next_state: BreathState; };
 };
 
-function BreathLabel({state}: {state: BreathState}) {
-  let labelText = "";
+function BreathText({state, children}: {state: BreathState, children?: JSX.Element | JSX.Element[]}) {
+  let heading = "";
   switch (state) {
     case "in":
-      labelText = "Breath In";
+      heading = "Breath In";
       break;
     case "out":
-      labelText = "Breath Out";
+      heading = "Breath Out";
       break;
     case "in_hold":
     case "out_hold":
-      labelText = "Hold";
+      heading = "Hold";
       break;
   }
-  return <span>{labelText}</span>
+  return <div className="breath-text">
+    <h2>{heading}</h2>
+    {children}
+  </div>;
 }
 
 function circleRadiusRatio(runningFor: number, states: StateConfig, state: BreathState) {
@@ -92,8 +95,8 @@ export default function BreathTimer({in_time, out_time, in_hold, out_hold}: prop
   const timeRemaining = states[currentBreathState].duration - runningFor;
 
   return <div className="blue-circle" style={{width: radius, height: radius, background: background}}>
-    <BreathLabel state={currentBreathState}/>
-    <br/>
-    <span>{timeRemaining.toFixed(2)}</span>
+    <BreathText state={currentBreathState}>
+      <span className="time-remaining">{timeRemaining.toFixed(0)}</span>
+    </BreathText>
   </div>
 }

@@ -8,3 +8,9 @@
   justify-content: center;
 
 }
+
+.breath-text .time-remaining {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center
+}
