@@ -96,7 +96,7 @@ export default function BreathTimer({in_time, out_time, in_hold, out_hold}: prop
 
   return <div className="blue-circle" style={{width: radius, height: radius, background: background}}>
     <BreathText state={currentBreathState}>
-      <span className="time-remaining">{timeRemaining.toFixed(0)}</span>
+      {states[currentBreathState].duration >= 2 ? <span className="time-remaining">{timeRemaining.toFixed(0)}</span> : <></>}
     </BreathText>
   </div>
 }
